@@ -27,7 +27,7 @@ export class AppComponent {
       playerId: this.game!!.turn.id
     };
 
-    this.http.put<Game>(`/api/v1/game/${this.game!!.id}/move`, gameMoveRequest).subscribe(result => {
+    this.http.put<Game>(`https://tic-tac-toe-online.azurewebsites.net/api/v1/game/${this.game!!.id}/move`, gameMoveRequest).subscribe(result => {
       this.game = result;
     }, error => console.error(error));
   }
@@ -57,7 +57,7 @@ export class AppComponent {
       playerOName: "O"
     };
 
-    this.http.post<Game>('/api/v1/game', newGameRequest).subscribe(result => {
+    this.http.post<Game>('https://tic-tac-toe-online.azurewebsites.net/api/v1/game', newGameRequest).subscribe(result => {
       this.game = result;
     }, error => console.error(error));
   }
