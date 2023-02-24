@@ -1,4 +1,6 @@
-﻿namespace webapi.Models;
+﻿using Newtonsoft.Json;
+
+namespace webapi.Models;
 
 public class GameStatus
 {
@@ -13,7 +15,7 @@ public class GameStatus
         };
         Status = PlayStatus.RUNNING;
     }
-
+    [JsonProperty(PropertyName = "id")]
     public string Id { get; set; }
     public Player PlayerX { get; set; }
     public Player PlayerO { get; set; }

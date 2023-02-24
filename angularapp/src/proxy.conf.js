@@ -3,7 +3,7 @@ const PROXY_CONFIG = [
     context: [
       "/api",
     ],
-    target: "https://tic-tac-toe-online.azurewebsites.net/",
+    target: "https://localhost:7150",
     secure: false
   }
 ]

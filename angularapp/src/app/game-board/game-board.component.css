@@ -1,0 +1,31 @@
+.square-container {
+  flex: 0 0 32%;
+}
+
+.game-square {
+  height: 96%;
+  text-align: center;
+  line-height: 0.85;
+  cursor: pointer;
+}
+
+.gameItem {
+  display: inline;
+  margin: 0px;
+  font-size: 14rem;
+  overflow: hidden;
+}
+
+.noClick {
+  pointer-events: none;
+}
+
+section {
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-between;
+  align-items: center;
+  margin: 7% auto 50px auto;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,13 @@
+<section>
+  <h1 class="mt-5">Please select the type of Tic-Tac-Toe do you want to play.</h1>
+  <div mat-dialog-content class="summary">
+    <ul>
+      <li><strong>Single Player</strong> - Both players play on the same browser</li>
+      <li><strong>Multi Player</strong> - Each player plays in their own browser</li>
+    </ul>
+  </div>
+  <mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="singlePlayer" class="hover:bg-blue-dark rounded-lg border shadow-md font-bold py-2 px-4 rounded mx-auto block mt-5 ">Single Player</button>
+    <button mat-button [mat-dialog-close]="multiPlayer" class="hover:bg-blue-dark rounded-lg border shadow-md font-bold py-2 px-4 rounded mx-auto block mt-5 ">Multi Player</button>
+  </mat-dialog-actions>
+</section>

@@ -1,0 +1,14 @@
+section {
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-between;
+  align-items: center;
+  margin: 7% auto 50px auto;
+  flex-wrap: wrap;
+}
+
+.summary {
+  display: block;
+  font-size: 3rem;
+}

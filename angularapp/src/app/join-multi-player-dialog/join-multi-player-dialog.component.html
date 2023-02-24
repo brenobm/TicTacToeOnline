@@ -1,0 +1,16 @@
+<section>
+  <h1 class="mt-5">Tic-Tac-Toe Multi Player.</h1>
+  <mat-dialog-actions>
+    <div>
+      <button mat-button [mat-dialog-close]="singlePlayer" class="hover:bg-blue-dark rounded-lg border shadow-md font-bold py-2 px-4 rounded mx-auto block mt-5 ">Create a new Game</button>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Game Id</mat-label>
+        <input matInput [(ngModel)]="gameId">
+      </mat-form-field>
+      <button mat-button [mat-dialog-close]="multiPlayer" class="hover:bg-blue-dark rounded-lg border shadow-md font-bold py-2 px-4 rounded mx-auto block mt-5 ">Join an existing game</button>
+    </div>
+ 
+  </mat-dialog-actions>
+</section>

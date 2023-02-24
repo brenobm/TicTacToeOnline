@@ -14,14 +14,14 @@ namespace webapi.Services
             _gameRepository = gameRepository;
         }
 
-        public GameStatus? GetGame(string gameId)
+        public Task<GameStatus?> GetGame(string gameId)
         {
             return _gameRepository.GetGame(gameId);
         }
 
-        public GameStatus? MakeMove(string gameId, string playerId, int row, int column)
+        public async Task<GameStatus?> MakeMove(string gameId, string playerId, int row, int column)
         {
-            var game = _gameRepository.GetGame(gameId);
+            var game = await _gameRepository.GetGame(gameId);
 
             if (game == null)
             {
@@ -59,7 +59,7 @@ namespace webapi.Services
             return game;
         }
 
-        public GameStatus NewGame(string playerXId, string playerXName, string playerOId, string playerOName)
+        public Task<GameStatus> NewGame(string playerXId, string playerXName, string playerOId, string playerOName)
         {
             var playerX = new Player(playerXId, playerXName);
             var playerO = new Player(playerOId, playerOName);
@@ -67,6 +67,21 @@ namespace webapi.Services
             return _gameRepository.NewGame(playerX, playerO, starts);
         }
 
+        public Task<GameStatus> NewGame(string playerXId, string playerXName)
+        {
+            var playerX = new Player(playerXId, playerXName);
+            return _gameRepository.NewGame(playerX);
+        }
+
+        public async Task<GameStatus> JoinGame(string gameId, string playerOName, string playerOId)
+        {
+            var game = await _gameRepository.GetGame(gameId);
+
+            var playerO = new Player(playerOId, playerOName);
+            var starts = _random.Next(0, 2) == 0 ? game.PlayerX : playerO;
+            return await _gameRepository.UpdateGame(game);
+
+        }
         private GameStatus UpdateGameStatus(GameStatus game, int row, int column, Element move)
         {
             game.Board[row][column] = move;

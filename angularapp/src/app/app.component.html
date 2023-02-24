@@ -1,23 +1,7 @@
 <h1 id="tableLabel">Tic Tac Toe Online</h1>
 
-<p *ngIf="!game"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+<p *ngIf="!ticTacToeService.game"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
 
-<section *ngIf="game" class="summary">
-  <p><strong>Turn:</strong> {{ game.turn.name }}</p>
-  <p><strong>Status:</strong> {{ getStatusName(game.status) }}</p>
-  <p *ngIf="game.winner">
-    <strong>Winner:</strong> {{ game.winner.name }}
-  </p>
-</section>
-<section *ngIf="game">
-  <div *ngFor="let row of game.board; index as rowIndex" class="square-container">
-    <div *ngFor="let col of row; index as colIndex">
-      <div [ngSwitch]="col" class="game-square rounded-lg border bg-teal-lightest shadow-md" (click)="makeMove(rowIndex, colIndex)">
-        <p *ngSwitchCase="0" class="gameItem">&nbsp;</p>
-        <p *ngSwitchCase="1" class="gameItem">X</p>
-        <p *ngSwitchCase="2" class="gameItem">O</p>
-      </div>
-    </div>
-  </div>
-  <button (click)="newGame()" class="hover:bg-blue-dark rounded-lg border shadow-md font-bold py-2 px-4 rounded mx-auto block mt-5 ">New Game</button>
-</section>
+<app-game-summary></app-game-summary>
+<app-game-board></app-game-board>
+<button (click)="openNewGameDialog()" class="hover:bg-blue-dark rounded-lg border shadow-md font-bold py-2 px-4 rounded mx-auto block mt-5 ">New Game</button>

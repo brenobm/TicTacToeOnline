@@ -1,0 +1,8 @@
+<section *ngIf="ticTacToeService.game" class="summary">
+  <h1>Playing <strong>{{ ticTacToeService.getGameTypeName() }}</strong> Game</h1>
+  <p><strong>Turn:</strong> {{ ticTacToeService.game.turn.name }}</p>
+  <p><strong>Status:</strong> {{ ticTacToeService.getStatusName() }}</p>
+  <p *ngIf="ticTacToeService.game.winner">
+    <strong>Winner:</strong> {{ ticTacToeService.game.winner.name }}
+  </p>
+</section>
