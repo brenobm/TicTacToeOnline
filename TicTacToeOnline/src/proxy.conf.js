@@ -4,7 +4,7 @@ const PROXY_CONFIG = [
       "/api",
       "/gameHub",
     ],
-    target: "https://localhost:7150",
+    target: "https://tic-tac-toe-online.azurewebsites.net",
     secure: false,
     ws: true
   }

@@ -183,7 +183,7 @@ export class TicTacToeService {
   }
 
   private setUpSignalR() {
-    this.connection = new HubConnectionBuilder().withUrl("https://localhost:7150/gameHub").build();
+    this.connection = new HubConnectionBuilder().withUrl("https://tic-tac-toe-online.azurewebsites.net/gameHub").build();
     let self = this;
 
     this.connection.on("Game", function (user: string, game: Game) {
