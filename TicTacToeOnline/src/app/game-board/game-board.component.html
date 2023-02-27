@@ -1,0 +1,23 @@
+<section *ngIf="ticTacToeService.game">
+  <div *ngFor="let row of ticTacToeService.game.board; index as rowIndex" class="square-container">
+    <div *ngFor="let col of row; index as colIndex">
+      <ng-container [ngSwitch]="col">
+        <div *ngSwitchCase="0" class="game-square rounded-lg border bg-teal-lightest shadow-md" (click)="ticTacToeService.makeMove(rowIndex, colIndex)">
+          <p class="gameItem">&nbsp;</p>
+        </div>
+        <div *ngSwitchCase="1" class="game-square rounded-lg border bg-teal-lightest shadow-md x-cell" (click)="ticTacToeService.makeMove(rowIndex, colIndex)">
+          <p class="gameItem">X</p>
+        </div>
+        <div *ngSwitchCase="2" class="game-square rounded-lg border bg-teal-lightest shadow-md o-cell" (click)="ticTacToeService.makeMove(rowIndex, colIndex)">
+          <p class="gameItem">O</p>
+        </div>
+        <div *ngSwitchCase="3" class="game-square rounded-lg border bg-teal-lightest shadow-md win-cell" (click)="ticTacToeService.makeMove(rowIndex, colIndex)">
+          <p class="gameItem">X</p>
+        </div>
+        <div *ngSwitchCase="4" class="game-square rounded-lg border bg-teal-lightest shadow-md win-cell" (click)="ticTacToeService.makeMove(rowIndex, colIndex)">
+          <p class="gameItem">O</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

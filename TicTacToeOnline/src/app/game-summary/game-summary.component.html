@@ -1,0 +1,18 @@
+<section *ngIf="ticTacToeService.game" class="scoreboard">
+  <div class="scoreboard-item">
+    <p>Game Type:</p>
+    <p>{{ ticTacToeService.getGameType() }}</p>
+  </div>
+  <div class="scoreboard-item">
+    <p>Status:</p>
+    <p>{{ ticTacToeService.getGameStatus() }}</p>
+  </div>
+  <div *ngIf="ticTacToeService.gameType == 1" class="scoreboard-item">
+    <p>Player:</p>
+    <p>{{ ticTacToeService.currentPlayerName }}</p>
+  </div>
+  <div *ngIf="ticTacToeService.gameType == 1" class="scoreboard-item">
+    <p>Game Id:</p>
+    <p>{{ ticTacToeService.game.id }}</p>
+  </div>
+</section>

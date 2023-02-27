@@ -1,0 +1,4 @@
+c:\personal\projects\dotnet\TicTacToeOnline2\angularapp\obj\Debug\angularapp.esproj.SuggestedBindingRedirects.cache
+c:\personal\projects\dotnet\TicTacToeOnline2\angularapp\obj\Debug\angularapp.esproj.CoreCompileInputs.cache
+C:\personal\projects\dotnet\TicTacToeOnline\angularapp\obj\Debug\angularapp.esproj.SuggestedBindingRedirects.cache
+C:\personal\projects\dotnet\TicTacToeOnline\angularapp\obj\Debug\angularapp.esproj.CoreCompileInputs.cache

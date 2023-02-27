@@ -1,0 +1,43 @@
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  max-width: 250px;
+}
+
+.summary-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  color: red;
+}
+
+.summary-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.summary-button {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  height: 50px; /* Updated height value */
+  font-size: 16px; /* Updated font size value */
+  font-weight: bold; /* Added font weight */
+}

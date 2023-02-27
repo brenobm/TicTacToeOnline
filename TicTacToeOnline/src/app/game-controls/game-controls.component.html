@@ -1,0 +1,24 @@
+<div *ngIf="ticTacToeService.error" class="summary-error">
+  <p class="summary-text">{{ ticTacToeService.error }}</p>
+</div>
+<section class="summary">
+  <div class="summary-item">
+    <p class="summary-text">Both players play together in the same browser</p>
+    <button mat-raised-button color="primary" (click)="ticTacToeService.newSinglePlayerGame()" class="summary-button">New Single Player Game</button>
+  </div>
+  <div class="summary-item">
+    <p class="summary-text">Each player play in their browser</p>
+    <button mat-raised-button color="primary" (click)="ticTacToeService.newMultiPlayerGame()" class="summary-button">New Multi Player Game</button>
+  </div>
+  <div class="summary-item">
+    <p class="summary-text">Join in an existing game</p>
+    <mat-form-field class="example-form-field">
+      <mat-label>Game ID</mat-label>
+      <input matInput type="text" [(ngModel)]="value">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!value" (click)="ticTacToeService.joinMultiPlayerGame(value)" class="summary-button">Join a Multi Player Game</button>
+  </div>
+</section>

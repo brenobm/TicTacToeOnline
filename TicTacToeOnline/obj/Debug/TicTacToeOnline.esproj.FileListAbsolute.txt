@@ -1,0 +1,2 @@
+C:\personal\projects\dotnet\TicTacToeOnline\TicTacToeOnline\obj\Debug\TicTacToeOnline.esproj.SuggestedBindingRedirects.cache
+C:\personal\projects\dotnet\TicTacToeOnline\TicTacToeOnline\obj\Debug\TicTacToeOnline.esproj.CoreCompileInputs.cache
