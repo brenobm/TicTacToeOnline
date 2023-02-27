@@ -97,11 +97,11 @@
               "type": "Microsoft.ApiManagement/service/apis",
               "name": "tic-tac-toe-webapi/tic-tac-toe-webapi",
               "properties": {
-                "displayName": "tic-tac-toe-webapi",
+                "displayName": "webapi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "apiRevision": "1",
                 "description": null,
                 "subscriptionRequired": true,
-                "serviceUrl": null,
+                "serviceUrl": "https://tic-tac-toe-online.azurewebsites.net",
                 "path": "",
                 "protocols": [
                   "https"

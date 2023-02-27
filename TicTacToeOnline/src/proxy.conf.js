@@ -1,12 +1,10 @@
 const PROXY_CONFIG = [
   {
     context: [
-      "/api",
-      "/gameHub",
+      "/api"
     ],
     target: "https://tic-tac-toe-online.azurewebsites.net",
-    secure: false,
-    ws: true
+    secure: false
   }
 ]
 
